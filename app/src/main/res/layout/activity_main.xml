@@ -67,7 +67,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text"
-        android:srcCompat="@tools:sample/backgrounds/scenic"
+        tools:srcCompat="@tools:sample/backgrounds/scenic"
         android:contentDescription="@sample/posts.json/data/text" />
 
     <ImageButton
