@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/share_number"
-        android:layout_width="30dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/share"
         app:layout_constraintStart_toEndOf="@+id/share"
         app:layout_constraintTop_toTopOf="@+id/share"
@@ -19,8 +19,8 @@
 
     <TextView
         android:id="@+id/favorite_number"
-        android:layout_width="30dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/favorite"
         app:layout_constraintStart_toEndOf="@+id/favorite"
         app:layout_constraintTop_toTopOf="@+id/favorite"
@@ -62,6 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:contentDescription="@sample/posts.json/data/text"
         app:layout_constraintBottom_toTopOf="@id/published"
         app:layout_constraintStart_toEndOf="@id/avatar"
         app:layout_constraintTop_toTopOf="@id/avatar"
@@ -72,6 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:contentDescription="@sample/posts.json/data/text"
         app:layout_constraintBottom_toBottomOf="@id/avatar"
         app:layout_constraintStart_toEndOf="@id/avatar"
         app:layout_constraintTop_toBottomOf="@id/author"
@@ -81,7 +83,7 @@
         android:id="@+id/text_netology"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:contentDescription="@sample/posts.json/data/text"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
 
