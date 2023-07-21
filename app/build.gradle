@@ -8,6 +8,7 @@ android {
     compileSdk 32
 
     defaultConfig {
+        vectorDrawables.useSupportLibrary = true
         applicationId "ru.netology.test"
         minSdk 29
         targetSdk 32

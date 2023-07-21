@@ -8,6 +8,34 @@
     tools:context=".MainActivity">
 
 
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="@sample/posts.json/data/text"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/ic_baseline_share_24"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="@sample/posts.json/data/text"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintHorizontal_bias="0.150"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/ic_baseline_favorite_border_24"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,ImageContrastCheck" />
+
     <ImageView
         android:id="@+id/avatar"
         android:layout_width="48dp"
@@ -50,25 +78,25 @@
         tools:text="@sample/posts.json/data/text" />
 
     <ImageButton
+        android:id="@+id/imageButton2"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginStart="16dp"
         android:background="@null"
+        android:contentDescription="@sample/posts.json/data/text"
         android:src="@drawable/ic_baseline_more_vert_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@sample/posts.json/data/text" />
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="300dp"
-        android:layout_height="170dp"
+        android:layout_width="wrap_content"
+        android:layout_height="1in"
+        android:contentDescription="@sample/posts.json/data/text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text"
-        tools:srcCompat="@tools:sample/backgrounds/scenic"
-        android:contentDescription="@sample/posts.json/data/text" />
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -80,7 +108,7 @@
         android:contentDescription="@sample/posts.json/data/text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@android:drawable/ic_menu_view"
+        app:srcCompat="@drawable/ic_baseline_remove_red_eye_24"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,ImageContrastCheck" />
 
     <TextView
@@ -92,6 +120,29 @@
         app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:layout_constraintTop_toTopOf="@+id/imageButton"
         tools:text="@sample/posts.json/data/id" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintTop_toTopOf="@+id/imageButton4"
+        tools:text="@sample/posts.json/data/id" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="2dp"
+        tools:text="@sample/posts.json/data/id"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toTopOf="@+id/imageButton3"
+        app:layout_constraintVertical_bias="0.482" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
