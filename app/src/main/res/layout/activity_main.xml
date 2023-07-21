@@ -91,7 +91,8 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="1in"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
         android:contentDescription="@sample/posts.json/data/text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
