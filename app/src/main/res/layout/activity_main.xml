@@ -8,29 +8,41 @@
     tools:context=".MainActivity">
 
 
+    <TextView
+        android:id="@+id/share_number"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/share"
+        app:layout_constraintStart_toEndOf="@+id/share"
+        app:layout_constraintTop_toTopOf="@+id/share"
+        tools:text="@sample/posts.json/data/id" />
+
+    <TextView
+        android:id="@+id/favorite_number"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/favorite"
+        app:layout_constraintStart_toEndOf="@+id/favorite"
+        app:layout_constraintTop_toTopOf="@+id/favorite"
+        tools:text="@sample/posts.json/data/id" />
+
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/share"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
         android:background="@null"
         android:contentDescription="@sample/posts.json/data/text"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
-        app:layout_constraintHorizontal_bias="0.065"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintStart_toEndOf="@+id/favorite_number"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/ic_baseline_share_24"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,ImageContrastCheck" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/favorite"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
         android:background="@null"
         android:contentDescription="@sample/posts.json/data/text"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
-        app:layout_constraintHorizontal_bias="0.150"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/ic_baseline_favorite_border_24"
@@ -66,7 +78,7 @@
         tools:text="@sample/posts.json/data/published" />
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/text_netology"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -78,7 +90,7 @@
         tools:text="@sample/posts.json/data/text" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/menu"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:background="@null"
@@ -92,58 +104,32 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="100dp"
-        android:scaleType="fitCenter"
         android:contentDescription="@sample/posts.json/data/text"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text"
+        app:layout_constraintTop_toBottomOf="@+id/text_netology"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/remove_red_eye"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="30dp"
         android:background="@null"
         android:contentDescription="@sample/posts.json/data/text"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/like_number"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/ic_baseline_remove_red_eye_24"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,ImageContrastCheck" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/like_number"
         android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="@+id/imageButton"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/remove_red_eye"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/remove_red_eye"
         tools:text="@sample/posts.json/data/id" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
-        app:layout_constraintStart_toEndOf="@+id/imageButton4"
-        app:layout_constraintTop_toTopOf="@+id/imageButton4"
-        tools:text="@sample/posts.json/data/id" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:layout_marginEnd="2dp"
-        tools:text="@sample/posts.json/data/id"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
-        app:layout_constraintTop_toTopOf="@+id/imageButton3"
-        app:layout_constraintVertical_bias="0.482" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
