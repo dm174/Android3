@@ -81,12 +81,11 @@
 
     <TextView
         android:id="@+id/text_netology"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:contentDescription="@sample/posts.json/data/text"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/avatar"
         tools:text="@sample/posts.json/data/text" />
@@ -126,8 +125,9 @@
 
     <TextView
         android:id="@+id/like_number"
-        android:layout_width="30dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@sample/posts.json/data/text"
         app:layout_constraintBottom_toBottomOf="@+id/remove_red_eye"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/remove_red_eye"
