@@ -28,10 +28,8 @@ class MainActivity : AppCompatActivity() {
 
 
                    favoriteNumber.text = formatNumber(post.liked)
-                   if (post.likedByMe){
-                       favorite.setImageResource(if(post.likedByMe)R.drawable.ic_baseline_favorite_border_red else R.drawable.ic_baseline_favorite_border_24)
+                   favorite.setImageResource(if(post.likedByMe)R.drawable.ic_baseline_favorite_border_red else R.drawable.ic_baseline_favorite_border_24)
 
-                   }
                    favorite.setOnClickListener {
                        post.likedByMe = !post.likedByMe
                        if (post.likedByMe) post.liked++ else post.liked--
