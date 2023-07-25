@@ -8,8 +8,8 @@ class PostRepositoryInMemory: PostRepository {
         "Нетология.",
         "22.07.2023",
         "Привет! Это задание 4",
-        false,
-        1_999,
+        true,
+        1_000,
         1,
         false
 
