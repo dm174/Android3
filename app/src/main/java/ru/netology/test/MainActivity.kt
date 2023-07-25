@@ -13,47 +13,39 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val viewModel by viewModels<PostViewModel>()
-           viewModel.data.observe(this){ post ->
+        viewModel.data.observe(this) { post ->
+
+
+            with(binding) {
+                author.text = post.author
+                published.text = post.published
+                textNetology.text = post.content
+                likeNumber.text = post.liked.toString()
+                shareNumber.text = post.repostByMe.toString()
 
 
 
-               with(binding){
-                author.text=post.author
-                published.text=post.published
-                textNetology.text=post.content
-                likeNumber.text=post.liked.toString()
-                shareNumber.text=post.repostByMe.toString()
+
+                favoriteNumber.text = formatNumber(post.liked)
+                favorite.setImageResource(if (post.likedByMe) R.drawable.ic_baseline_favorite_border_red else R.drawable.ic_baseline_favorite_border_24)
 
 
 
+                shareNumber.text = post.repost.toString()
+                if (post.repostByMe) {
+                    share.setImageResource(R.drawable.ic_baseline_share_24)
+                }
 
-                   favoriteNumber.text = formatNumber(post.liked)
-                   favorite.setImageResource(if(post.likedByMe)R.drawable.ic_baseline_favorite_border_red else R.drawable.ic_baseline_favorite_border_24)
-
-                   favorite.setOnClickListener {
-                       post.likedByMe = !post.likedByMe
-                       if (post.likedByMe) post.liked++ else post.liked--
-                       favorite.setImageResource(if(post.likedByMe)R.drawable.ic_baseline_favorite_border_red else R.drawable.ic_baseline_favorite_border_24)
-                       favoriteNumber.text = formatNumber(post.liked)
-                   }
-
-                   shareNumber.text= post.repost.toString()
-                   if (post.repostByMe){
-                       share.setImageResource(R.drawable.ic_baseline_favorite_border_24)
-                   }
-                   share.setOnClickListener {
-                       post.repostByMe = !post.repostByMe
-                       post.repost++
-                       shareNumber.text= post.repost.toString()
-                   }
             }
-           }
-        binding.favorite.setOnClickListener{
+        }
+        binding.favorite.setOnClickListener {
             viewModel.favorite()
         }
+        binding.share.setOnClickListener { viewModel.share() }
         println("onCreate $this")
     }
-    override fun onStart(){
+
+    override fun onStart() {
         super.onStart()
         println("onStart $this")
     }
