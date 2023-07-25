@@ -9,4 +9,5 @@ private val repository: PostRepository = PostRepositoryInMemory()
 
     val data = repository.get()
     fun favorite()=repository.favorite()
+ fun share()=repository.share()
 }
