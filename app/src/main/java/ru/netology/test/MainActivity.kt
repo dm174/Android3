@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
                 shareNumber.text = post.repost.toString()
                 if (post.repostByMe) {
                     share.setImageResource(R.drawable.ic_baseline_share_24)
+
                 }
 
             }
@@ -41,7 +42,8 @@ class MainActivity : AppCompatActivity() {
         binding.favorite.setOnClickListener {
             viewModel.favorite()
         }
-        binding.share.setOnClickListener { viewModel.share() }
+        binding.share.setOnClickListener { viewModel.share()
+        }
         println("onCreate $this")
     }
 

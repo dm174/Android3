@@ -11,7 +11,7 @@ class PostRepositoryInMemory: PostRepository {
         true,
         1_000,
         1,
-        false
+        true
 
     )
     private val data = MutableLiveData(post)
