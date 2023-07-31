@@ -4,6 +4,8 @@ import androidx.lifecycle.LiveData
 import ru.netology.test.dto.Post
 
 interface PostRepository{
-    fun get():LiveData<Post>
-    fun favorite()
+    fun getAll():LiveData<List<Post>>
+
+    fun likeById(id:Long)
+    fun shareCounter(id: Long)
 }
