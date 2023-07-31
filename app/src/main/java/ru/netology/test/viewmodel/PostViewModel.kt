@@ -7,7 +7,7 @@ import ru.netology.test.repository.PostRepositoryInMemory
 class PostViewModel :ViewModel(){
 private val repository: PostRepository = PostRepositoryInMemory()
 
-    val data = repository.get()
-    fun favorite()=repository.favorite()
- fun share()=repository.share()
+   val data =repository.getAll()
+    fun likeById(id:Long)=repository.likeById(id)
+    fun shareCounter(id: Long)=repository.shareCounter(id)
 }
